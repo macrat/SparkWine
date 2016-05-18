@@ -12,9 +12,14 @@ Project{
         name: { return FileInfo.baseName(path) }
 
         files: [
-            'src/main.cpp',
-            'src/ofApp.cpp',
-            'src/ofApp.h',
+            "src/circleobject.h",
+            "src/fallingcircle.h",
+            "src/gameobject.h",
+            "src/main.cpp",
+            "src/ofApp.cpp",
+            "src/ofApp.h",
+            "src/player.cpp",
+            "src/player.h",
         ]
 
         of.addons: [

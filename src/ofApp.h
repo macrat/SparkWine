@@ -1,8 +1,16 @@
 #pragma once
 
+#include <vector>
+
 #include "ofMain.h"
 
+#include "gameobject.h"
+
+
 class ofApp : public ofBaseApp {
+private:
+	std::vector<GameObject *> objects;
+
 public:
     void setup();
     void update();
