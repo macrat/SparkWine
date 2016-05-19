@@ -7,6 +7,8 @@
 
 #include <string>
 
+#include "gameobject.h"
+
 
 class TextObject : public GameObject {
 private:
