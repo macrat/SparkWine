@@ -4,7 +4,7 @@
 
 
 void WineList::update() {
-	if((int)ofRandom(0, 4) == 0){
+	if((int)ofRandom(0, 2) == 0){
 		add(std::shared_ptr<Wine>(new Wine(ofPoint(ofRandom(ofGetWidth()), -32))));
 	}
 

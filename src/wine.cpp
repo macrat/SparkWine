@@ -18,7 +18,7 @@ Wine::Wine(ofPoint pos, ofVec2f vec, int level) : FallingCircle(
 
 std::shared_ptr<Wine> Wine::spark(const std::shared_ptr<CircleObject> target){
 	float angle = atan2(pos.y - target->getPos().y, pos.x - target->getPos().x) + ofRandom(-0.4, 0.4);
-	float power = ofRandom(8, 14);
+	float power = ofRandom(1, 6);
 	ofVec2f vec(cos(angle)*power, sin(angle)*power);
 
 	if(level < 4){
