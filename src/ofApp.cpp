@@ -4,6 +4,7 @@
 
 #include "player.h"
 #include "winelist.h"
+#include "textobject.h"
 
 
 void ofApp::setup(){
