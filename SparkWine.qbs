@@ -16,7 +16,6 @@ Project{
             "src/fallingcircle.h",
             "src/gameobject.h",
             "src/main.cpp",
-            "src/objectmanager.cpp",
             "src/objectmanager.h",
             "src/ofApp.cpp",
             "src/ofApp.h",
@@ -24,6 +23,7 @@ Project{
             "src/player.h",
             "src/wine.cpp",
             "src/wine.h",
+            "src/winelist.cpp",
             "src/winelist.h",
         ]
 

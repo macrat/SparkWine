@@ -17,7 +17,9 @@ public:
 
 	void update() override;
 
-	void mouseMoved(ofPoint pos) override { target.set(pos); }
+	void mouseMoved(int x, int y) override { target.set(x, y); }
+
+	void hit(){ damege++; }
 };
 
 #endif

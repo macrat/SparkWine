@@ -1,3 +1,5 @@
+#include <memory>
+
 #include "ofApp.h"
 
 #include "player.h"
@@ -9,6 +11,10 @@ void ofApp::setup(){
 	ofEnableAlphaBlending();
 	ofEnableBlendMode(OF_BLENDMODE_ADD);
 
-	add(new Player());
-	add(new WineList());
+	std::shared_ptr<Player> p = std::shared_ptr<Player>(new Player());
+	add(p);
+
+	std::shared_ptr<WineList> wl = std::shared_ptr<WineList>(new WineList());
+	add(wl);
+	wl->setPlayer(std::weak_ptr<Player>(p));
 }

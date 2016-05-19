@@ -23,6 +23,18 @@ public:
 		ofSetColor(color);
 		ofDrawCircle(pos, size);
 	}
+
+	bool collision(const std::shared_ptr<CircleObject> target){
+		return target->pos.distance(pos) <= target->size + size;
+	}
+
+	float angle(ofPoint target){
+		return target.angleRad(pos);
+	}
+
+	ofPoint getPos(){
+		return pos;
+	}
 };
 
 #endif

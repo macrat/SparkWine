@@ -9,9 +9,9 @@ public:
 	virtual void draw() = 0;
 	virtual bool isAlive(){ return true; }
 
-	virtual void mouseMoved(ofPoint pos){}
-	virtual void mousePressed(ofPoint pos, int button){}
-	virtual void mouseReleased(ofPoint pos, int button){}
+	virtual void mouseMoved(int x, int y){}
+	virtual void mousePressed(int x, int y, int button){}
+	virtual void mouseReleased(int x, int y, int button){}
 };
 
 #endif

@@ -8,14 +8,14 @@
 #include "objectmanager.h"
 
 
-class ofApp : public ofBaseApp, public ObjectManager {
+class ofApp : public ofBaseApp, public ObjectManager<GameObject> {
 public:
 	void setup() override;
 
-	void update() override { ObjectManager::update(); }
-	void draw() override { ObjectManager::draw(); }
+	void update() override { ObjectManager<GameObject>::update(); }
+	void draw() override { ObjectManager<GameObject>::draw(); }
 
-	void mouseMoved(int x, int y) override { ObjectManager::mouseMoved(ofPoint(x, y)); }
-	void mousePressed(int x, int y, int button) override { ObjectManager::mousePressed(ofPoint(x, y), button); }
-	void mouseReleased(int x, int y, int button) override { ObjectManager::mouseReleased(ofPoint(x, y), button); }
+	void mouseMoved(int x, int y) override { ObjectManager<GameObject>::mouseMoved(x, y); }
+	void mousePressed(int x, int y, int button) override { ObjectManager<GameObject>::mousePressed(x, y, button); }
+	void mouseReleased(int x, int y, int button) override { ObjectManager<GameObject>::mouseReleased(x, y, button); }
 };

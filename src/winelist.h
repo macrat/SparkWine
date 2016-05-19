@@ -8,15 +8,12 @@
 #include "wine.h"
 
 
-class WineList : public ObjectManager {
+class WineList : public ObjectManager<Wine> {
 private:
 	std::weak_ptr<Player> player;
 
 public:
-	void update() override {
-		add(new Wine(ofPoint(ofRandom(ofGetWidth()), -32)));
-		ObjectManager::update();
-	}
+	void update() override;
 
 	void setPlayer(std::weak_ptr<Player> player){ this->player = player; }
 };
