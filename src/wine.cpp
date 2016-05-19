@@ -3,7 +3,7 @@
 #include "wine.h"
 
 
-Wine::Wine(ofPoint pos) : Wine::Wine(pos, ofVec2f(0, 0), 1) { }
+Wine::Wine(ofPoint pos) : Wine::Wine(pos, ofVec2f(0, 8), 1) { }
 
 
 Wine::Wine(ofPoint pos, ofVec2f vec, int level) : FallingCircle(

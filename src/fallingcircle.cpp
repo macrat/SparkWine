@@ -13,7 +13,5 @@ void FallingCircle::update(){
 	pos += vec;
 
 	vec = vec * 0.9 + gravity;
-	if(vec.length() > maxspeed){
-		vec = gravity.normalize() * maxspeed;
-	}
+	vec.limit(maxspeed);
 }
