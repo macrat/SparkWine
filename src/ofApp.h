@@ -2,29 +2,20 @@
 
 #include <vector>
 
-#include "ofMain.h"
+#include <ofMain.h>
 
 #include "gameobject.h"
+#include "objectmanager.h"
 
 
-class ofApp : public ofBaseApp {
-private:
-	std::vector<GameObject *> objects;
-
+class ofApp : public ofBaseApp, public ObjectManager {
 public:
-    void setup();
-    void update();
-    void draw();
+	void setup() override;
 
-    void keyPressed(int key);
-    void keyReleased(int key);
-    void mouseMoved(int x, int y );
-    void mouseDragged(int x, int y, int button);
-    void mousePressed(int x, int y, int button);
-    void mouseReleased(int x, int y, int button);
-    void mouseEntered(int x, int y);
-    void mouseExited(int x, int y);
-    void windowResized(int w, int h);
-    void dragEvent(ofDragInfo dragInfo);
-    void gotMessage(ofMessage msg);
+	void update() override { ObjectManager::update(); }
+	void draw() override { ObjectManager::draw(); }
+
+	void mouseMoved(int x, int y) override { ObjectManager::mouseMoved(ofPoint(x, y)); }
+	void mousePressed(int x, int y, int button) override { ObjectManager::mousePressed(ofPoint(x, y), button); }
+	void mouseReleased(int x, int y, int button) override { ObjectManager::mouseReleased(ofPoint(x, y), button); }
 };
