@@ -3,6 +3,7 @@
 
 #include <ofMain.h>
 
+
 class GameObject {
 public:
 	virtual void update() = 0;

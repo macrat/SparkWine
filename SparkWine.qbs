@@ -13,6 +13,7 @@ Project{
 
         files: [
             "src/circleobject.h",
+            "src/fallingcircle.cpp",
             "src/fallingcircle.h",
             "src/gameobject.h",
             "src/main.cpp",
