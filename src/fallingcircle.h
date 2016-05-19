@@ -12,7 +12,11 @@ private:
 	int maxspeed;
 
 public:
-	FallingCircle(ofPoint pos, ofVec2f vec, ofVec2f gravity, int maxspeed=6, ofColor color=ofColor(255, 0, 0), int size);
+	FallingCircle(ofPoint pos, ofVec2f vec, ofVec2f gravity, int maxspeed, ofColor color, int size) : CircleObject(pos, color, size){
+		this->vec = vec;
+		this->gravity = gravity;
+		this->maxspeed = maxspeed;
+	}
 
 	void update() override {
 		pos += vec;

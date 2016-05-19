@@ -8,7 +8,7 @@
 
 
 class ObjectManager : public GameObject {
-private:
+protected:
 	std::vector< std::shared_ptr<GameObject> > objects;
 
 public:

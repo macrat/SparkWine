@@ -22,6 +22,9 @@ Project{
             "src/ofApp.h",
             "src/player.cpp",
             "src/player.h",
+            "src/wine.cpp",
+            "src/wine.h",
+            "src/winelist.h",
         ]
 
         of.addons: [
